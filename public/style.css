@@ -4,7 +4,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #222;
-	background-color: #ECF0F1;
+	background-color: white;
 	text-align: left;
 }
 
@@ -35,7 +35,8 @@ img {
 }
 
 .well{
-  background-color:white;
-  border-left: solid 3px #f5f5f5;
+  background-color:inherit;
+  border:none;
+  border-left: solid 3px #e3e3e3;
   
 }
