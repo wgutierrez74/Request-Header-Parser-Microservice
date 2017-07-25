@@ -26,11 +26,11 @@ module.exports = function(app){
     
     if(Number(query)){
       json.unix = query;
-      json.natural = moment.unix(query).format("MMMM Do, YYYY");
+      json.natural = moment.unix(query).format("MMMM D, YYYY");
     }
     else{
       json.unix = (new Date(query).getTime()/1000).toFixed(0);
-      json.natural = query;
+      json.natural = moment(query).format("MMMM D, YYYY");
     }
     
     
