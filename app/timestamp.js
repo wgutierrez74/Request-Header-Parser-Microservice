@@ -13,6 +13,8 @@ module.exports = function(app){
     
     var query = req.params.query;
     
+    if(!Number(query) && new Date(query) == 'Invalid Date')
+    
     if(Number(query)){
       unixToNatural()
     }
