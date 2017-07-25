@@ -2,21 +2,23 @@ var moment = require('moment');
 
 module.exports = function(app){
   
-  var json = {
-    'unix':null,
-    'natural':null
-  }
+ 
   
-  app.route('/', function(req, res){
-    
-    res.sendFile(process.cwd()+ 'views/index.html');
+  app.route("/").get(function(req, res){
+    console.log("HOME");
+    res.sendFile(process.cwd()+ '/views/index.html');
     
   });
   
   
-  app.route('/:query', function(req, res){
+  app.route('/:query').get(function(req, res){
     
     var query = req.params.query;
+    
+    var json = {
+    'unix':null,
+    'natural':null
+    };
     
     if(!Number(query) && new Date(query) == 'Invalid Date'){
       res.send(json);
