@@ -1,4 +1,4 @@
-var moment
+var moment = require('moment');
 
 module.exports = function(app){
   
@@ -24,11 +24,11 @@ module.exports = function(app){
     
     if(Number(query)){
       json.unix = query;
-      json.natural = 
+      json.natural = moment.unix(query).format("MMMM Do, YYYY");
     }
     else{
       json.unix = (new Date(query).getTime()/1000).toFixed(0);
-      json.natural = moment.unix(query).format("MMMM Do, YYYY");
+      json.natural = query;
     }
     
     
