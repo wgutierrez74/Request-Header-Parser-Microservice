@@ -10,30 +10,25 @@
 
    <body>
       <div class="container">
-        <h1>API Parser: Timestamp Microservice</h1>
-        <div class="well ham">
-          User Stories:
+        <h1>API BodyParser: Header Microservice</h1>
+        <div class="well">
+          User Story:
           <ol>
             <li>
-               I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural 
-              language date (example: January 1, 2016)
+               I can type "/whoami" at the end of the url and I will see my IP address, language preference, and current operating system
             </li>
-            <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
-            <li> If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+           
           </ol>
         </div>
         
         <div class="example-text">
           <h3>
-            Example usage:
+            Link to service:
           </h3>
-            <a href="https://wg-timestamp.glitch.me/December%2015,%202015" target="_blank"><code>
-              https://wg-timestamp.glitch.me/December%2015,%202015
-            </code></a><br>
-              
-            <a href="https://wg-timestamp.glitch.me/1450137600" target="_blank"><code>
-            https://wg-timestamp.glitch.me/1450137600
-              </code></a>
+            <a href="https://wg-timestamp.glitch.me/whoami" target="_blank"><code>
+              https://wg-timestamp.glitch.me/whoami
+            </code></a>
+            
         </div>
         
         <div class="example-text">
@@ -41,7 +36,7 @@
             Example output:
           </h3>
             <code>
-              { "unix": 1450137600, "natural": "December 15, 2015" }
+              { "IP Adress": "255.255.255.255", "Language": "en-US", "Software": Windows NT 10.0;  Win64; x64  }
             </code>
         </div>
         
