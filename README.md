@@ -1,5 +1,5 @@
-# Timestamp MicroService
+# Request Header Parser MicroService
 
 FreeCodeCamp Backend Project
-Converts Unix time-stamp to natural 
-language and vice versa
+Finds and displays a user's IP address, language preference, 
+and current operating system
