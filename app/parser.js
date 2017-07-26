@@ -15,10 +15,10 @@ module.exports = function(app){
     
     
     
-    var json = {
-    'IP address':req.headers["x-fowarded-for"].split(",")[0],
-    'Language':req.headers["accept-language"].split(",")[0],
-    'Software':null
+     var json = {
+     'IP address':req.headers["x-forwarded-for"].split(",")[0],
+     'Language':req.headers["accept-language"].split(",")[0],
+     'Software':req.headers["user-agent"].split("(")[1].split(")")[0]
     };
     
     
