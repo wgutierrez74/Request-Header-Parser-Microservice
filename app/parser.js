@@ -16,8 +16,8 @@ module.exports = function(app){
     
     
     var json = {
-    'IP address':null,
-    'Language':null,
+    'IP address':req.headers["x-fowarded-for"].split(",")[0],
+    'Language':req.headers["accept-language"].split(",")[0],
     'Software':null
     };
     
